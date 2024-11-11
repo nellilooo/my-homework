@@ -1,14 +1,14 @@
 <?php
 
-function caesarEncryption(string $text, $shift): string {
+function caesarEncryption(string $text, int $shift): string {
     $encrypted = '';
     
     // цикл: по каждому символу
     foreach (str_split( $text) as $char) {
-        // проверка на символ
+        // проверка на наличие букв
         if (ctype_alpha($char)) {
             $shifted = ord($char) + $shift;
-            // проверка на диапазон символов
+            
             if (ctype_upper($char)) {
                 // только большие 
                 if ($shifted > ord('Z')) {
