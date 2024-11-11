@@ -1,6 +1,6 @@
 <?php
 
-function caesarEncryption($text, $shift) {
+function caesarEncryption(string $text, $shift): string {
     $encrypted = '';
     
     // цикл: по каждому символу
@@ -34,7 +34,7 @@ function caesarDecryption($encryptedMessage, $shift) {
     return caesarEncryption($encryptedMessage, -$shift); //шифт отрицательный для шифра "в обратную" = расшифровка
 }
 
-$message = "Mama, I love u!";
+$message = "PHP kruto)))";
 $shift = 3;
 
 $encryptedMessage = caesarEncryption($message, $shift);
